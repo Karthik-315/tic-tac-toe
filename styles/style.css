@@ -221,6 +221,7 @@ button {
 
 .player-one--input,
 .player-two--input {
+  position: relative;
   height: 4rem;
   position: relative;
   display: -webkit-box;
@@ -265,19 +266,31 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fff !important;
 }
 
+input.light-mode:-webkit-autofill,
+input.light-mode:-webkit-autofill:hover,
+input.light-mode:-webkit-autofill:focus,
+input.light-mode:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important;
+}
+
 .player-label {
   position: absolute;
   bottom: 0;
   height: 100%;
   width: 100%;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .player-text.light-mode {
   color: #333;
+  border-bottom: 0.1rem solid #0d82f0;
 }
 
-.label__name {
+.label__name,
+.label__border {
   position: absolute;
   bottom: 0.2rem;
   left: 0.25rem;
@@ -288,8 +301,22 @@ input:-webkit-autofill:active {
   transition: all 0.3s;
 }
 
+.label__border {
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  border-bottom: 0.2rem solid #fff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
 .label__name.light-mode {
+  color: #000;
+}
+
+.label__border.light-mode {
   color: #0d82f0;
+  border-bottom: 0.2rem solid #0d82f0;
 }
 
 .player-text:focus + .player-label .label__name,
@@ -298,6 +325,12 @@ input:-webkit-autofill:active {
   left: 0;
   font-size: 0.9rem;
   font-weight: 900;
+}
+
+.player-text:focus + .player-label .label__border,
+.player-text:valid + .player-label .label__border {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .player-one--selection,

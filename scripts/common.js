@@ -10,6 +10,7 @@ const header = document.querySelector(".header");
 
 const playerInput = document.querySelectorAll(".player-text");
 const labels = document.querySelectorAll(".label__name");
+const labelBorderAll = document.querySelectorAll(".label__border");
 const allSymbols = document.querySelectorAll(".symbol");
 const formSubmit = document.querySelector(".submit__button");
 
@@ -43,6 +44,7 @@ const groupIndividualElements = function () {
     individualElements.push(allSymbols);
     individualElements.push(playerInput);
     individualElements.push(labels);
+    individualElements.push(labelBorderAll);
     individualElements.push(mainSeparators);
     individualElements.push(squares);
 
