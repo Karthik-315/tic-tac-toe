@@ -132,7 +132,7 @@ initialize();
 
 /* Event Listeners */
 homeButton.addEventListener("click", function () {
-    window.location.href = "/";
+    window.location.href = "./index.html";
 });
 
 playerForm.addEventListener("submit", getUserData);
