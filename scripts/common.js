@@ -2,7 +2,6 @@
 
 /* Variables */
 
-const homeButton = document.querySelector(".header__home-button");
 const setThemeButton = document.querySelector(".header__theme-button");
 const lightIcon = document.querySelector(".header__theme--light");
 const darkIcon = document.querySelector(".header__theme--dark");
@@ -121,6 +120,3 @@ setLinks();
 
 /* Event Listeners */
 setThemeButton.addEventListener("click", computeTheme);
-homeButton.addEventListener("click", function () {
-    window.location.href = "../index.html";
-});

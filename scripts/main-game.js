@@ -1,6 +1,7 @@
 "use strict";
 
 /* Variables */
+const homeButton = document.querySelector(".header__home-button");
 const playerOne = document.querySelector(".player-one");
 const versusContainer = document.querySelector(".versus");
 const playerTwo = document.querySelector(".player-two");
@@ -177,5 +178,8 @@ const reloadGame = function () {
 initialize();
 
 /* Event Listeners */
+homeButton.addEventListener("click", function () {
+    window.location.href = "../index.html";
+});
 mainPlayArea.addEventListener("click", placeSymbol);
 reloadButton.addEventListener("click", reloadGame);

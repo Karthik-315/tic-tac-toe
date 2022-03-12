@@ -1,6 +1,8 @@
 "use strict";
 
 /* Variables */
+const homeButton = document.querySelector(".header__home-button");
+
 const playerForm = document.querySelector(".player__form");
 const allFormInput = document.querySelectorAll(".player__form input");
 
@@ -129,6 +131,10 @@ const initialize = function () {
 initialize();
 
 /* Event Listeners */
+homeButton.addEventListener("click", function () {
+    window.location.href = "/";
+});
+
 playerForm.addEventListener("submit", getUserData);
 
 playerOneSymbolContainer.addEventListener("click", setPlayerSymbol);

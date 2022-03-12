@@ -423,8 +423,7 @@ button {
   z-index: 3;
 }
 
-.main__modal,
-.info__modal {
+.main__modal {
   position: absolute;
   top: 50%;
   right: 0.5rem;
@@ -484,10 +483,6 @@ button {
   font-size: 2rem;
 }
 
-.info__modal .modal__title {
-  font-size: 2.25rem;
-}
-
 .modal__close {
   background: none;
   color: #fff;
@@ -504,10 +499,6 @@ button {
   text-align: center;
 }
 
-.info__modal .modal__text {
-  text-align: left;
-}
-
 /* End of main section styling */
 /* Responsive Design */
 @media (min-width: 768px) {
@@ -520,6 +511,35 @@ button {
     row-gap: 2rem;
     -webkit-column-gap: 5rem;
             column-gap: 5rem;
+  }
+  .main__modal {
+    position: absolute;
+    top: 60%;
+    right: 30%;
+    bottom: -20%;
+    left: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #0f0f0f;
+    padding: 1rem;
+    z-index: 5;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border-radius: 0.3rem;
+  }
+  .hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

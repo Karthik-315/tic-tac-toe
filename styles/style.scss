@@ -169,8 +169,7 @@
     z-index: 3;
 }
 
-.main__modal,
-.info__modal {
+.main__modal {
     position: absolute;
     top: 50%;
     right: 0.5rem;
@@ -205,10 +204,6 @@
     font-size: 2rem;
 }
 
-.info__modal .modal__title {
-    font-size: 2.25rem;
-}
-
 .modal__close {
     background: none;
     color: #fff;
@@ -225,10 +220,6 @@
     text-align: center;
 }
 
-.info__modal .modal__text {
-    text-align: left;
-}
-
 /* End of main section styling */
 
 /* Responsive Design */
@@ -241,5 +232,23 @@
         grid-template-columns: 1fr 1fr;
         row-gap: 2rem;
         column-gap: 5rem;
+    }
+
+    .main__modal {
+        position: absolute;
+        top: 60%;
+        right: 30%;
+        bottom: -20%;
+        left: 30%;
+        @include useFlex();
+        background: #0f0f0f;
+        padding: 1rem;
+        z-index: 5;
+        transform: translateY(-50%);
+        border-radius: 0.3rem;
+    }
+
+    .hidden {
+        display: none;
     }
 }
