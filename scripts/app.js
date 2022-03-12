@@ -49,7 +49,7 @@ const getUserData = function (e) {
     playerData = { ...userData, ...playerSymbolData };
 
     window.localStorage.setItem("playerData", JSON.stringify(playerData));
-    window.location.href = "../html/main-game.html";
+    window.location.href = "/html/main-game.html";
 };
 
 const setPlayerSymbol = function (e) {

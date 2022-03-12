@@ -122,5 +122,5 @@ setLinks();
 /* Event Listeners */
 setThemeButton.addEventListener("click", computeTheme);
 homeButton.addEventListener("click", function () {
-    window.location.href = "../index.html";
+    window.location.href = "/index.html";
 });
