@@ -1,0 +1,58 @@
+/* Footer Styling */
+.footer {
+    @include useFlex($dir: column, $justifyDir: space-between, $alignDir: space-between);
+    height: 8rem;
+    background: #0c0c0c;
+    color: #fff;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.footer.light-mode {
+    background: #0d82f0;
+}
+
+.footer > * {
+    width: 100%;
+}
+
+.footer__info-text {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.copyright-year {
+    font-size: 1.1rem;
+}
+
+.links__list {
+    @include useFlex($justifyDir: space-evenly);
+    list-style: none;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.link-icon {
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+.link-icon:visited {
+    color: #fff;
+}
+
+/* End of Footer Styling */
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .links__list {
+        @include useFlex($justifyDir: center);
+    }
+
+    .link-icon {
+        margin: 0 4rem;
+    }
+}

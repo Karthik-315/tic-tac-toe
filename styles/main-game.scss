@@ -1,0 +1,192 @@
+@import "./mixins";
+@import "./common";
+@import "./header";
+@import "./footer";
+
+.main {
+    height: calc(100vh - 10rem);
+    color: #fff;
+    padding: 1rem;
+    @include useFlex($dir: column);
+}
+
+.main.light-mode {
+    color: #000;
+}
+
+.main__details {
+    position: relative;
+    @include useFlex();
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 1s;
+}
+
+.player-one,
+.player-two {
+    width: 100%;
+    @include useFlex($dir: column);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.player-turn {
+    opacity: 1;
+}
+
+.player-one--name,
+.player-two--name,
+.versus-text {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.player-one--symbol,
+.player-two--symbol {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.versus-text {
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+.set-zero-opacity {
+    opacity: 0;
+}
+
+.player-winner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.score-text {
+    font-size: 2.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main__separator {
+    border: 0;
+    height: 0.2rem;
+    width: 100%;
+    margin: 1.5rem auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.main__separator.light-mode {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main__play-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.main__play-area.game-over {
+    pointer-events: none;
+}
+
+.square {
+    @include useFlex();
+    width: 7rem;
+    height: 7rem;
+    border: 0.15rem solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.square.light-mode {
+    border: 0.15rem solid rgba(0, 0, 0, 0.5);
+}
+
+.square.active {
+    border: 0.2rem solid #fff;
+    pointer-events: none;
+}
+
+.square.active.light-mode {
+    border: 0.2rem solid rgb(0, 0, 0);
+}
+
+.square.winner,
+.square.winner.light-mode {
+    border: 0.3rem solid rgb(24, 196, 33);
+}
+
+.square.game-over {
+    opacity: 0.5;
+}
+
+.square:hover {
+    background: rgb(37, 37, 37);
+}
+
+.square.light-mode:hover {
+    background: #0d82f088;
+}
+
+.square-text {
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main__score {
+    @include useFlex($dir: column);
+}
+
+.play-again-button {
+    position: relative;
+    @include useFlex($justifyDir: space-between);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+}
+
+.play-again-button.light-mode {
+    border: 0.2rem solid #0d82f0;
+}
+
+.play-again--text {
+    padding: 0 1rem;
+}
+
+.play-again--arrow {
+    position: absolute;
+    right: 1.75rem;
+    font-size: 1.25rem;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.play-again-button:hover .play-again--arrow {
+    right: 1rem;
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .main__details {
+        width: 50%;
+    }
+
+    .main__separator {
+        width: 75%;
+    }
+}

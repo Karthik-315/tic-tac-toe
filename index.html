@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/b798e919c8.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Tic Tac Toe</title>
+        <script defer src="scripts/app.js"></script>
+        <script defer src="scripts/common.js"></script>
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <button class="header__home-button">
+                <i class="fa-solid fa-house-chimney header__home-icon"></i>
+            </button>
+
+            <h2 class="header__title">
+                <span>Tic</span>
+                <span>Tac</span>
+                <span>Toe</span>
+            </h2>
+
+            <button class="header__theme-button" data-theme="dark">
+                <i class="fa-solid fa-sun header__theme--light"></i>
+                <i class="fa-solid fa-moon header__theme--dark"></i>
+            </button>
+        </header>
+
+        <main class="main">
+            <section class="info__modal hidden">
+                <article class="modal">
+                    <div class="modal__title-container">
+                        <h2 class="modal__title">Hello, I am Karthik!</h2>
+                        <button class="modal__close">&times;</button>
+                    </div>
+                    <p class="modal__text">An aspiring WEB developer!</p>
+                </article>
+            </section>
+
+            <section class="main__player-data">
+                <form class="player__form">
+                    <article class="player-one--input">
+                        <input
+                            type="text"
+                            class="player-text player--one-text"
+                            id="playerOne"
+                            name="player-one"
+                            required
+                        />
+                        <label for="player-one" class="player-label player--one-label">
+                            <span class="label__name">Player One</span>
+                        </label>
+                    </article>
+
+                    <article class="player-one--selection">
+                        <div class="selection--x player-one--x symbol">
+                            <span class="selection--x-text">X</span>
+                        </div>
+                        <div class="selection--o player-one--o symbol">
+                            <span class="selection--o-text">O</span>
+                        </div>
+                    </article>
+
+                    <article class="player-two--input">
+                        <input
+                            type="text"
+                            class="player-text player--two-text"
+                            id="playerTwo"
+                            name="player-two"
+                            required
+                        />
+                        <label for="player-two" class="player-label player--two-label">
+                            <span class="label__name">Player Two</span>
+                        </label>
+                    </article>
+
+                    <article class="player-two--selection">
+                        <div class="selection--x player-two--x symbol">
+                            <span class="selection--x-text">X</span>
+                        </div>
+                        <div class="selection--o player-two--o symbol">
+                            <span class="selection--o-text">O</span>
+                        </div>
+                    </article>
+
+                    <article class="form__submit">
+                        <button type="submit" class="submit__button">
+                            <span>Play</span>
+                            <i class="fa-solid fa-play arrow-right"></i>
+                        </button>
+                    </article>
+                </form>
+            </section>
+
+            <section class="main__overlay hidden"></section>
+
+            <section class="main__modal hidden">
+                <article class="modal">
+                    <div class="modal__title-container">
+                        <h2 class="modal__title">Hmm, something's wrong!</h2>
+                        <button class="modal__close">&times;</button>
+                    </div>
+                    <p class="modal__text">Select a player symbol before proceeding</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__info">
+                <span class="footer__info-text">
+                    Developed by
+                    <strong>Karthik Kumar</strong>
+                    &copy;
+                    <span class="copyright-year"></span>
+                </span>
+            </section>
+
+            <section class="footer__links">
+                <ul class="links__list">
+                    <li class="list__item">
+                        <a href="#" class="link-icon twitter" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="link-icon github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="link-icon coffee" target="_blank">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+/* Header styling */
+
+.header {
+    @include useFlex($justifyDir: space-between);
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+    background: #0c0c0c;
+    box-shadow: 0 0.1rem 0.2rem 0 rgb(138, 138, 138);
+}
+
+.header.light-mode {
+    background: #0d82f0;
+    box-shadow: 0 0.1rem 0.5rem 0 rgb(138, 138, 138);
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.header__home-button,
+.header__theme-button {
+    background: none;
+    @include useFlex();
+}
+
+.header__home-icon,
+.header__theme--light,
+.header__theme--dark {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.header__title {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header__title > span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.header__title > span::first-letter {
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* End of header styling */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/b798e919c8.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="../styles/main-game.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Tic Tac Toe</title>
+        <script defer src="../scripts/main-game.js"></script>
+        <script defer src="../scripts/common.js"></script>
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <button class="header__home-button">
+                <i class="fa-solid fa-house-chimney header__home-icon"></i>
+            </button>
+
+            <h2 class="header__title">
+                <span>Tic</span>
+                <span>Tac</span>
+                <span>Toe</span>
+            </h2>
+
+            <button class="header__theme-button" data-theme="dark">
+                <i class="fa-solid fa-sun header__theme--light"></i>
+                <i class="fa-solid fa-moon header__theme--dark hidden"></i>
+            </button>
+        </header>
+
+        <main class="main">
+            <section class="main__details">
+                <article class="player-one">
+                    <p class="player-one--name">Watermelon</p>
+                    <span class="player-one--symbol">X</span>
+                </article>
+
+                <article class="versus">
+                    <p class="versus-text">Vs</p>
+                </article>
+
+                <article class="player-two">
+                    <p class="player-two--name">Carrot</p>
+                    <span class="player-two--symbol">O</span>
+                </article>
+
+                <article class="player-winner set-zero-opacity">
+                    <h2 class="score-text">Watermelon Wins!</h2>
+                </article>
+            </section>
+
+            <hr class="main__separator" />
+
+            <section class="main__play-area">
+                <article class="square square-00">
+                    <!-- <span class="square-text square-x">X</span> -->
+                </article>
+                <article class="square square-01">
+                    <!-- <span class="square-text square-o">o</span> -->
+                </article>
+                <article class="square square-02"></article>
+
+                <article class="square square-10"></article>
+                <article class="square square-11"></article>
+                <article class="square square-12"></article>
+
+                <article class="square square-20"></article>
+                <article class="square square-21"></article>
+                <article class="square square-22"></article>
+            </section>
+
+            <hr class="main__separator" />
+
+            <section class="main__play-again">
+                <button class="play-again-button">
+                    <span class="play-again--text">Play Again</span>
+                    <i class="fa-solid fa-play play-again--arrow"></i>
+                </button>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__info">
+                <span class="footer__info-text">
+                    Developed by
+                    <strong>Karthik Kumar</strong>
+                    &copy;
+                    <span class="copyright-year"></span>
+                </span>
+            </section>
+
+            <section class="footer__links">
+                <ul class="links__list">
+                    <li class="list__item">
+                        <a href="#" class="link-icon twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="link-icon github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="link-icon coffee">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>
